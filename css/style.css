@@ -1,0 +1,97 @@
+/* Removes browser defaults injected by browsers */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+/* Body */
+body {
+    background-color: #f2f2f2;
+    font-family: "Lora", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+/* header */
+header {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4.6rem;
+    align-content: center;
+    position: fixed;
+    /* header stays above content */
+    z-index: 1000;
+    background: linear-gradient(to right, #CF2D11 40%, #260801) left;
+
+
+    /* header ul */
+    ul {
+        list-style: none;
+    }
+
+    /* header anchors */
+    a {
+        text-decoration: none;
+    }
+
+    /* header, page title */
+    h1 {
+        color: #DECECC;
+        font-size: 28px;
+        text-transform: uppercase;
+        font-family: "Sekuya", system;
+    }
+
+    /* navigation icons */
+    i {
+        color: #f2f2f2;
+        font-size: 37px;
+    }
+
+    /* menu button */
+    button {
+        background-color: #de0808;
+        /* hidden button */
+        display: none;
+    }
+
+    /* navbar container */
+    .navigation-container {
+        padding-left: 0.5rem;
+        padding-right: 1.8rem;
+    }
+
+    /* navbar menu list */
+    .navigation-menu li {
+        display: inline-block;
+    }
+
+    .navigation-menu li {
+        margin-left: 56px;
+    }
+
+    /* list span */
+    .navigation-menu span {
+        color: #DECECC;
+        font-weight: 600;
+        text-transform: uppercase;
+    }
+
+    .navigation-container span:hover {
+        color: aquamarine;
+        text-decoration: underline;
+    }
+
+}
+
+.header .navigation-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+/* for tablets with 991px screen */
+@media(max-width: 991px) {}

@@ -2,3 +2,5 @@ favicons used in this project are free favicons from
 Favicon generator 
 
 All fonts are free fonts from Google Fonts
+
+menu icon are free use icons from remixicon.com 

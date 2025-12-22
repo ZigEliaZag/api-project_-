@@ -4,19 +4,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- meta search ingenes -->
+    <meta name="description" content="Manchester activities. find place to have funny in Manchester ">
     <!-- favicons -->
     <link rel="icon" type="image/png" href="assets/favicon/favicon-96x96.png" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href="assets/favicon/favicon.svg" />
     <link rel="shortcut icon" href="assets/favicon/favicon.ico" />
     <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png" />
-
+    <!-- icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css">
     <!-- google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Eagle+Lake&family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Pirata+One&family=Zalando+Sans+Expanded:ital,wght@0,200..900;1,200..900&display=swap"
+        href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Eagle+Lake&family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Lora:ital,wght@0,400..700;1,400..700&family=Pirata+One&family=Sekuya&family=Zalando+Sans+Expanded:ital,wght@0,200..900;1,200..900&display=swap"
         rel="stylesheet">
-
     <!-- stylesheet -->
     <link rel="stylesheet" href="css/style.css">
     <!-- title -->
@@ -25,6 +27,48 @@
 </head>
 
 <body>
+    <!-- header -->
+    <header class="header">
+        <nav class="navigation-container">
+            <div>
+                <a href="index.html" class="page-title">
+                    <h1 class="home">Manchester</h1>
+                </a>
+            </div>
+            <button type="button">
+                <ul>
+                    </li>
+                    <a href=""><i class="ri-menu-2-line navigation-open"></i></a>
+                    <li>
+                    <li>
+                        <a href=""><i class="ri-close-line navigation-close"></i></a>
+                    </li>
+                </ul>
+            </button>
+
+            <div class="navigation-menu" id="navigation-toggle">
+                <ul>
+                    <li>
+                        <a href="#home">
+                            <span>Home</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <span>Activities</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/pages/feedback.html">
+                            <span>Feedback</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+        </nav>
+
+    </header>
 
     <script src="js/apiFetch.js"></script>
     <script src="js/ui.js"></script>
