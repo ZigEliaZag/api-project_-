@@ -107,18 +107,22 @@ header {
         padding: 100px 0 40px;
         background: linear-gradient(0deg, #CF2D11 58%, #260801) no-repeat;
         transition: transform 0.7s;
-        /* display menu on the screen form the right */
-        transform: translateX(-100%);
+        /*transform: translateX(-100%);*/
 
-        >ul {
-            max-height: 100%;
+        /*>ul {
+            max-height: 100;
             overflow-y: hidden;
-        }
+        } */
 
         li {
             display: block;
         }
 
+    }
+
+    /* toggle and display menu on the screen from the right */
+    header .navigation-menu.open {
+        transform: translateX(-100%)
     }
 
     header {
@@ -135,6 +139,7 @@ header {
         border: none;
         outline: none;
         cursor: pointer;
+        /* keeps button visible when menu is open */
         z-index: 1;
         margin-right: 17px;
         /*transform: rotate(179deg);*/
@@ -157,6 +162,20 @@ header {
     header button .close-menu {
         transform: translateY(10px);
     }
+
+    /* rotetes when menu list is shown */
+    header button.active .open-menu {
+        transform: rotate(-57deg);
+    }
+
+    header button.active .close-menu {
+        transform: rotate(-57deg);
+    }
+
+    header button.active .rotet-self {
+        transform: rotate(26deg);
+    }
+
 
 
 }
