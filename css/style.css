@@ -97,7 +97,7 @@ header {
 #hero-section {
     width: 100%;
     height: 70vh;
-    background: url('../assets/images/view-london-city-sunset.jpg') no-repeat center / cover;
+    background: url('../images/view-london-city-sunset.jpg') no-repeat center / cover;
 }
 
 /* for tablets with screens up to 991px */
