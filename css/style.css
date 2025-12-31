@@ -134,11 +134,17 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    ;
     width: 100%;
     color: #260801;
     padding-left: 26px;
     padding-right: 26px;
 
+    section {
+        width: 70%;
+        margin-left: 10rem;
+
+    }
 
     h4 {
         font-size: larger;
@@ -230,6 +236,15 @@ header {
 
     header button.active .rotet-self {
         transform: rotate(26deg);
+    }
+
+    /* article summary */
+    #summary {
+
+        section {
+            width: 100%;
+            margin: 0;
+        }
     }
 
 
