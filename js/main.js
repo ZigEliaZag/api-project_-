@@ -17,11 +17,18 @@ function showMenu() {
 // display menu list
 toggleMenuBtn.addEventListener("click", showMenu)
 
-// attuch api to new function
+/* attuch api to new function
 async function importLondonData() {
     const londonData = await londonSummary();
     const manchesterData = await manchesterSummary()
-    console.log(londonData + '  ' + manchesterData)
-}
+
+} abandoned function
+ */
+
+// attuch api response to html body
+//const londonApiSummery = await londonSummary()
+//const manchesterApiSummary = await manchesterSummary()
+//document.getElementById("hero-p").innerHTML = manchesterApiSummary + londonApiSummery;
+
 
 
