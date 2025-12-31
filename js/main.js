@@ -26,9 +26,11 @@ async function importLondonData() {
  */
 
 // attuch api response to html body
-//const londonApiSummery = await londonSummary()
-//const manchesterApiSummary = await manchesterSummary()
-//document.getElementById("hero-p").innerHTML = manchesterApiSummary + londonApiSummery;
+const londonApiSummery = await londonSummary()
+const manchesterApiSummary = await manchesterSummary()
+
+document.getElementById("londonSummary").innerHTML = londonApiSummery;
+document.getElementById("manchesterSummary").innerHTML = manchesterApiSummary
 
 
 
