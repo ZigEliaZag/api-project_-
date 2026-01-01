@@ -112,6 +112,10 @@ header {
     font-size: xx-large;
     font-family: "Lora", serif;
 
+    h3 {
+        max-width: 17rem;
+    }
+
     p {
         max-width: 20rem;
         font-size: x-large;
@@ -120,6 +124,7 @@ header {
     }
 }
 
+/* span summary */
 .summary {
     display: flex;
     justify-content: center;
@@ -151,7 +156,7 @@ header {
         margin-top: 3rem;
     }
 
-    p {}
+    /* p {}*/
 }
 
 
@@ -236,6 +241,13 @@ header {
 
     header button.active .rotet-self {
         transform: rotate(26deg);
+    }
+
+    /* hero section */
+    .hero-container {
+        div {
+            margin-left: 1.2rem;
+        }
     }
 
     /* article summary */
