@@ -114,6 +114,7 @@ header {
 
     h3 {
         max-width: 17rem;
+        text-transform: capitalize;
     }
 
     p {
