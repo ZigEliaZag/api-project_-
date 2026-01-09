@@ -11,6 +11,7 @@ body {
     font-family: "Lora", serif;
     font-optical-sizing: auto;
     font-style: normal;
+    color: #ffffff;
 }
 
 /* header */
@@ -95,10 +96,70 @@ header {
 
 /* hero section */
 #hero-section {
+    margin-top: 4.3rem;
     width: 100%;
     height: 70vh;
     background: url('../images/view-london-city-sunset.jpg') no-repeat center / cover;
 }
+
+/* hero section container */
+.hero-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    background: linear-gradient(197deg, rgba(16, 21, 28, 0.237) 0%, rgba(0, 0, 0, 0.279) 100%, rgba(0, 0, 0, 0.121) 100%);
+    font-size: xx-large;
+    font-family: "Lora", serif;
+
+    h3 {
+        max-width: 17rem;
+        text-transform: capitalize;
+    }
+
+    p {
+        max-width: 20rem;
+        font-size: x-large;
+        background: linear-gradient(197deg, rgba(20, 21, 29, 0.337) 0%, rgba(0, 0, 0, 0.280) 100%, rgba(0, 0, 0, 0.121) 100%);
+        border-radius: 7px;
+    }
+}
+
+/* span summary */
+.summary {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 3rem;
+    font-size: xx-large;
+    color: #260801;
+}
+
+/* summary . artcle */
+#summary {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    ;
+    width: 100%;
+    color: #260801;
+    padding-left: 26px;
+    padding-right: 26px;
+
+    section {
+        width: 70%;
+        margin-left: 10rem;
+
+    }
+
+    h4 {
+        font-size: larger;
+        margin-top: 3rem;
+    }
+
+    /* p {}*/
+}
+
 
 /* for tablets with screens up to 991px */
 @media(max-width: 991px) {
@@ -181,6 +242,22 @@ header {
 
     header button.active .rotet-self {
         transform: rotate(26deg);
+    }
+
+    /* hero section */
+    .hero-container {
+        div {
+            margin-left: 1.2rem;
+        }
+    }
+
+    /* article summary */
+    #summary {
+
+        section {
+            width: 100%;
+            margin: 0;
+        }
     }
 
 
