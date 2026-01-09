@@ -1,1 +1,5 @@
+.env
 apiKey.txt
+package-lock.json
+package.json
+testing.js
