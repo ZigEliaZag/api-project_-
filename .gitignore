@@ -1,5 +1,11 @@
+# secret key 
 .env
+# api keys
 apiKey.txt
+# json package
 package-lock.json
 package.json
+# testing app
 testing.js
+# node modules 
+node_modules
