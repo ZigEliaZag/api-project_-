@@ -11,7 +11,7 @@ body {
     font-family: "Lora", serif;
     font-optical-sizing: auto;
     font-style: normal;
-    color: #ffffff;
+    color: #000000;
 }
 
 /* header */
@@ -109,6 +109,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
+    color: #ffffff;
 
     div {
 
@@ -126,10 +127,15 @@ header {
 
         }
     }
+}
 
-
-
-
+/* span, summary */
+.summary {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 1.3rem;
+    font-size: xx-large;
 }
 
 

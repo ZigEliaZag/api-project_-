@@ -1,3 +1,5 @@
+// import api functions
+import { londonSummary, manchesterSummary } from "./apiFetch";
 
 // navigation bar triger 
 const toggleMenuBtn = document.querySelector("header .btn-toggle");
@@ -12,4 +14,13 @@ function showMenu() {
 }
 
 // display menu list
-toggleMenuBtn.addEventListener("click", showMenu)
+toggleMenuBtn.addEventListener("click", showMenu);
+
+const londonApiSummary = await londonSummary();
+const manchesterApiSummary = await manchesterSummary();
+
+// display api fetched content
+//document.getElementById("londonSummary").innerHTML = londonApiSummary;
+//document.getElementById("manchesterSummary").innerHTML = manchesterApiSummary;
+
+
