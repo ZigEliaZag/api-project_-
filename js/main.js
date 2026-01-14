@@ -1,5 +1,5 @@
 // import api functions
-import { londonSummary, manchesterSummary } from "./apiFetch";
+import { londonSummary, manchesterSummary } from "./apiFetch.js";
 
 // navigation bar triger 
 const toggleMenuBtn = document.querySelector("header .btn-toggle");
@@ -19,8 +19,8 @@ toggleMenuBtn.addEventListener("click", showMenu);
 const londonApiSummary = await londonSummary();
 const manchesterApiSummary = await manchesterSummary();
 
-// display api fetched content
-//document.getElementById("londonSummary").innerHTML = londonApiSummary;
-//document.getElementById("manchesterSummary").innerHTML = manchesterApiSummary;
 
+// display api fetched content
+document.getElementById("londonSummary").innerHTML = londonApiSummary;
+document.getElementById("manchesterSummary").innerHTML = manchesterApiSummary;
 
