@@ -143,10 +143,16 @@ header {
     margin: 4rem;
     display: flex;
     flex-direction: column;
+    align-items: center;
 
-    h4 {
-        font-size: larger;
+    section {
+        width: 70%;
+
+        h4 {
+            font-size: larger;
+        }
     }
+
 
 
 }
@@ -244,8 +250,10 @@ header {
     }
 
     /* summary */
-    #summary {
-        margin: 1.8rem;
+    #summary section {
+        width: 100%;
+        margin: 0;
+
     }
 
 
