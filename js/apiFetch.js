@@ -61,10 +61,10 @@ export async function handlePexelsApi() {
         console.error('Could not load', displayData);
     } else {
 
-        //return displayData.src.original
+        return displayData.src.original
     }
 
-    console.log(displayData.src.original);
+    //return displayData.src.original
+
 }
 
-handlePexelsApi();
