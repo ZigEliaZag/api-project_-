@@ -239,7 +239,8 @@ header {
 
     /* hero section */
     .hero-container div {
-        margin-left: 1.5rem;
+        margin: 1.5rem;
+
     }
 
     /* summary */
