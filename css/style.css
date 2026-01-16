@@ -296,6 +296,7 @@ header {
             p {
                 background-color: #000000a8;
                 border-radius: 5px;
+                font-size: medium;
             }
         }
     }
