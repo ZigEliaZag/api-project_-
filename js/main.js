@@ -25,6 +25,6 @@ document.getElementById("londonSummary").innerHTML = londonApiSummary;
 document.getElementById("manchesterSummary").innerHTML = manchesterApiSummary;
 
 // fetched api image from pexels 
-const backGroundImage = await handlePexelsApi();
-
-document.getElementById("background-image").src = backGroundImage;
+const backGroundImages = await handlePexelsApi();
+// html body travel section background image
+document.getElementById("background-image").style.backgroundImage = `url(${backGroundImages})`; 
