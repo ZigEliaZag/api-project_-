@@ -286,6 +286,8 @@ header {
 
     /* travel section, transport */
     #background-image {
+        height: 100%;
+
         div {
             color: white;
 
