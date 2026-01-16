@@ -163,6 +163,26 @@ header {
     width: 100%;
     height: 15rem;
     background: no-repeat center / cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(255, 234, 0);
+
+    div {
+        max-width: 49rem;
+        border: 0;
+        border-radius: 5px;
+
+        p,
+        h2 {
+            text-align: center;
+            text-shadow: 1px 1px #000000;
+        }
+
+        p {
+            font-size: larger;
+        }
+    }
 }
 
 
@@ -262,6 +282,22 @@ header {
         width: 100%;
         margin-top: 5rem;
 
+    }
+
+    /* travel section, transport */
+    #background-image {
+        div {
+            color: white;
+
+            h2 {
+                font-size: xx-large;
+            }
+
+            p {
+                background-color: #000000;
+                border-radius: 5px;
+            }
+        }
     }
 
 
