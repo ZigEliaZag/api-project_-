@@ -40,7 +40,7 @@ const imageid = 1181202;
 // get api key from .env  file
 //require('dotenv').config()
 //dotenv.config();
-const pexelsApiKey = 'XQZxTk3e0dqYzqVOm9XxrK2umJ0PaQnSvlnzgIIveiLM4sfvukh88fwZ'; // tenporary key, valid up to 4 months
+const pexelsApiKey = 'XQZxTk3e0dqYzqVOm9XxrK2umJ0PaQnSvlnzgIIveiLM4sfvukh88fwZ'; // temporary key, valid up to 4 months
 
 export async function handlePexelsApi() {
     /**
@@ -67,4 +67,21 @@ export async function handlePexelsApi() {
     //return displayData.src.original
 
 }
+
+//import { response } from "express";
+// token for accessing API
+
+//import { app_id, app_key } from "../testing.js";
+//
+//const appId = app_id;
+//const appKey = app_key;
+//const trainStation = 'EUS'
+//
+//async function trainUrl() {
+//    //const trainData = await fetch(`https://transportapi.com/v3/uk/train/station_timetables/${trainStation}.json?app_id=${appId}&app_key=${appKey}&train_status=passenger`)
+//    const response = await trainData.json();
+//    console.log(response.departures.all)
+//}
+//
+//trainUrl()
 

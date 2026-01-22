@@ -185,6 +185,22 @@ header {
     }
 }
 
+/* show time, date, departure and destination section */
+#departure-section {
+    width: 100%;
+    height: auto;
+    background-color: #CF2D11;
+    display: flex;
+    justify-content: center;
+
+    .departure-container {
+        background-color: #ffffff;
+
+        .departure-destination {
+            align-items: baseline;
+        }
+    }
+}
 
 
 
