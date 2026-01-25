@@ -206,11 +206,36 @@ header {
         /* departure and destination */
         .departure-destination {
             display: flex;
-            flex-direction: baseline;
-            margin-bottom: 3rem;
+            flex-direction: row;
+            margin-bottom: 5rem;
             gap: 0.5rem;
-            border: 4px solid #e3e3e3;
+            border-top: 4px solid #e3e3e3;
             border-radius: 1.5px;
+        }
+
+        /* date and time */
+        #date-time {
+            font-size: x-large;
+
+            display: flex;
+            gap: 30px;
+            padding-bottom: 18px;
+            border-bottom: #606470 dashed;
+
+            h6 {
+                margin-left: 27px;
+            }
+        }
+
+        /* show depature time and destination */
+        .show-departure-time {
+            border-bottom: #606470 dashed;
+
+            /* list of time transport leave to destination */
+            ul {
+                margin-left: 27px;
+                padding-top: 20px;
+            }
         }
     }
 }
