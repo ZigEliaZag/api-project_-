@@ -78,10 +78,12 @@ export async function handlePexelsApi() {
 //const trainStation = 'EUS'
 //
 //async function trainUrl() {
-//    //const trainData = await fetch(`https://transportapi.com/v3/uk/train/station_timetables/${trainStation}.json?app_id=${appId}&app_key=${appKey}&train_status=passenger`)
+//    const trainData = await fetch(`https://transportapi.com/v3/uk/train/station_timetables/${trainStation}.json?app_id=${appId}&app_key=${appKey}&train_status=passenger`)
 //    const response = await trainData.json();
-//    console.log(response.departures.all)
+//    const departure = response.departures
+//    console.log(departure)
 //}
 //
-//trainUrl()
+////trainUrl()
+
 
