@@ -225,6 +225,7 @@ header {
 
             /* UK date and time */
             h6 {
+                text-align: center;
                 margin-left: 27px;
                 font-weight: normal;
             }
@@ -233,15 +234,17 @@ header {
 
         }
 
-        /* show depature time and destination */
-        .show-departure-time {
-            border-bottom: #606470 dashed;
+        /* time table */
+        table,
+        th,
+        td {
+            border: 5px solid #606470;
 
-            /* list of time transport leave to destination */
-            ul {
-                margin-left: 27px;
-                padding-top: 20px;
-            }
+        }
+
+        table {
+            margin-top: 20px;
+            border-collapse: collapse;
         }
     }
 }

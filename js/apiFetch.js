@@ -70,20 +70,48 @@ export async function handlePexelsApi() {
 
 //import { response } from "express";
 // token for accessing API
+import { app_id, app_key } from "../testing.js";
 
-//import { app_id, app_key } from "../testing.js";
-//
-//const appId = app_id;
-//const appKey = app_key;
-//const trainStation = 'EUS'
-//
-//async function trainUrl() {
-//    const trainData = await fetch(`https://transportapi.com/v3/uk/train/station_timetables/${trainStation}.json?app_id=${appId}&app_key=${appKey}&train_status=passenger`)
-//    const response = await trainData.json();
-//    const departure = response.departures
-//    console.log(departure)
-//}
-//
-////trainUrl()
+const appId = app_id;
+const appKey = app_key;
+const trainStation = 'EUS'
 
+async function trainUrl() {
+    /** fetch api data  */
+    const trainData = await fetch(`https://transportapi.com/v3/uk/train/station_timetables/${trainStation}.json?app_id=${appId}&app_key=${appKey}&train_status=passenger`)
+    const response = await trainData.json();
+    // gets all allowed data by api provider
+    const departure = response.departures.all
+
+    // collect all the wished data and returns it in tr 
+    const timeTable = departure.map(departure => {
+        return `
+        <tr>
+           <td>${departure.aimed_departure_time}</td>
+           <td>${departure.origin_name}</td>
+           <td>${departure.destination_name}</td>
+           <td>${departure.platform}</td>
+           <td>${departure.train_uid}</td>
+        </tr>
+        `
+    }).join('\n') // join table 
+
+    // Names in th table and append all the returned data from departure
+    const showTable = `
+      <table>
+        <tr>
+          <th>Departs</th>
+          <th>Departure</th>
+          <th>Destination</th>
+          <th>Platform</th>
+          <th>Train</th>
+        </tr>
+        ${timeTable /** appends returned tr data from departure to the table */}
+      </table>
+    `
+    // display the table in html body 
+    document.getElementById("timeTable").innerHTML = showTable
+
+}
+//trainUrl()
 
