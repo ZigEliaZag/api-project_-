@@ -72,12 +72,12 @@ export async function handlePexelsApi() {
 // token for accessing API
 //import { app_id, app_key } from "../testing.js";
 
-const appId = app_id;
-const appKey = app_key;
-const trainStation = 'EUS'
-
+//const appId = app_id;
+//const appKey = app_key;
+//const trainStation = 'EUS'
+/** 
 async function trainUrl() {
-    /** fetch api data  */
+    /** fetch api data  /
     const trainData = await fetch(`https://transportapi.com/v3/uk/train/station_timetables/${trainStation}.json?app_id=${appId}&app_key=${appKey}&train_status=passenger`)
     const response = await trainData.json();
     // gets all allowed data by api provider
@@ -106,12 +106,13 @@ async function trainUrl() {
           <th>Platform</th>
           <th>Train</th>
         </tr>
-        ${timeTable /** appends returned tr data from departure to the table */}
+        ${timeTable /** appends returned tr data from departure to the table /}
       </table>
     `
     // display the table in html body 
-    document.getElementById("timeTable").innerHTML = showTable
+    //document.getElementById("timeTable").innerHTML = showTable
 
 }
+*/ 
 //trainUrl()
 
