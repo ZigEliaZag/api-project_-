@@ -70,7 +70,7 @@ export async function handlePexelsApi() {
 
 //import { response } from "express";
 // token for accessing API
-import { app_id, app_key } from "../testing.js";
+//import { app_id, app_key } from "../testing.js";
 
 const appId = app_id;
 const appKey = app_key;
