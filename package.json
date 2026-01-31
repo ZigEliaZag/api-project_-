@@ -1,0 +1,26 @@
+{
+  "name": "api-project_",
+  "version": "1.0.0",
+  "description": "To ensure that my api key does not get expose, I use CONFIG then export the key to api file",
+  "main": "testing.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ZigEliaZag/api-project_-.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ZigEliaZag/api-project_-/issues"
+  },
+  "homepage": "https://github.com/ZigEliaZag/api-project_-#readme",
+  "dependencies": {
+    "dotenv": "^17.2.3",
+    "express": "^5.2.1"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.58.1",
+    "@types/node": "^25.1.0"
+  }
+}
