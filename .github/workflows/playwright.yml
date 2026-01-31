@@ -8,6 +8,9 @@ jobs:
   test:
     timeout-minutes: 60
     runs-on: ubuntu-latest
+    env:
+      TRASPORT_API_KEY: ${{ secrets.TRASPORT_API_KEY }}
+      TRASPORT_API_ID: ${{ secrets.TRASPORT_API_ID }}
     steps:
     - uses: actions/checkout@v4
     - uses: actions/setup-node@v4
