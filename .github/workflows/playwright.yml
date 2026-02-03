@@ -9,8 +9,9 @@ jobs:
     timeout-minutes: 60
     runs-on: ubuntu-latest
     env:
-      TRASPORT_API_KEY: ${{ secrets.TRASPORT_API_KEY }}
-      TRASPORT_API_ID: ${{ secrets.TRASPORT_API_ID }}
+      TRANSPORT_API_KEY: ${{ secrets.TRANSPORT_API_KEY }}
+      TRANSPORT_API_ID: ${{ secrets.TRANSPORT_API_ID }}
+      BASE_URL: ${{ secrets.BASE_URL }}
     steps:
     - uses: actions/checkout@v4
     - uses: actions/setup-node@v4

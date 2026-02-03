@@ -234,17 +234,32 @@ header {
 
         }
 
-        /* time table */
+        /* time table for departure and destination */
         table,
         th,
         td {
-            border: 5px solid #606470;
+            border: 2px solid #f2f2f2;
+            padding: 4px;
 
         }
 
         table {
             margin-top: 20px;
             border-collapse: collapse;
+            color: #ffffff;
+            background-color: #263849;
+
+        }
+
+        /* gives separet background color to th child */
+        th:nth-child(even),
+        th:nth-child(even) {
+            background-color: #606470;
+        }
+
+        /* gives sepate background color to tr child */
+        tr:nth-child(even) {
+            background-color: #606470;
         }
     }
 }

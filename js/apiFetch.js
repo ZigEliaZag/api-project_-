@@ -68,20 +68,25 @@ export async function handlePexelsApi() {
 
 }
 
-//import { response } from "express";
-// token for accessing API
-//import { app_id, app_key } from "../testing.js";
+// import api keys for local testing 
+//import { TRANSPORT_API_ID, TRANSPORT_API_KEY } from '../testing.js';
+//const apiId = TRANSPORT_API_ID
+//const apiKey = TRANSPORT_API_KEY
 
-//const appId = app_id;
-//const appKey = app_key;
-//const trainStation = 'EUS'
-/** 
+require('dotenv').config()
+// get transport api key from .env file
+const apiId = process.env.TRANSPORT_API_KEY;
+const apiKey = process.env.TRANSPORT_API_ID;
+
+// departure train station
+const departureTrainStation = 'EUS' // London Euston 
+
 async function trainUrl() {
-    /** fetch api data  /
-    const trainData = await fetch(`https://transportapi.com/v3/uk/train/station_timetables/${trainStation}.json?app_id=${appId}&app_key=${appKey}&train_status=passenger`)
+    /** fetch api data  */
+    const trainData = await fetch(`https://transportapi.com/v3/uk/train/station_timetables/${departureTrainStation}.json?app_id=${apiId}&app_key=${apiKey}&train_status=passenger`);
     const response = await trainData.json();
     // gets all allowed data by api provider
-    const departure = response.departures.all
+    const departure = response.departures.all;
 
     // collect all the wished data and returns it in tr 
     const timeTable = departure.map(departure => {
@@ -94,7 +99,7 @@ async function trainUrl() {
            <td>${departure.train_uid}</td>
         </tr>
         `
-    }).join('\n') // join table 
+    }).join('\n'); // join table 
 
     // Names in th table and append all the returned data from departure
     const showTable = `
@@ -106,13 +111,13 @@ async function trainUrl() {
           <th>Platform</th>
           <th>Train</th>
         </tr>
-        ${timeTable /** appends returned tr data from departure to the table /}
+        ${timeTable /** appends returned tr data from departure to the table */}
       </table>
     `
     // display the table in html body 
-    //document.getElementById("timeTable").innerHTML = showTable
+    document.getElementById("timeTable").innerHTML = showTable;
 
 }
-*/ 
-//trainUrl()
+
+trainUrl()
 

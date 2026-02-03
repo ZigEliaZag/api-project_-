@@ -1,5 +1,6 @@
 // @ts-check 
 import { test, expect } from '@playwright/test';
+import { config } from 'dotenv';
 
 test('has title', async ({ page }) => {
   await page.goto('https://playwright.dev/');
@@ -17,3 +18,10 @@ test('get started link', async ({ page }) => {
   // Expects page to have a heading with the name of Installation.
   await expect(page.getByRole('heading', { name: 'Installation' })).toBeVisible();
 });
+
+//config({ path: '.env' })
+////
+//test('use env variable', () => {
+//  const apiKey = process.env.TRANSPORT_API_KEY;
+//  console.log('key is:', apiKey)
+//})
