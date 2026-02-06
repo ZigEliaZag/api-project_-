@@ -72,7 +72,7 @@ export async function handlePexelsApi() {
 //import { TRANSPORT_API_ID, TRANSPORT_API_KEY } from '../testing.js';
 //const apiId = TRANSPORT_API_ID
 //const apiKey = TRANSPORT_API_KEY
-
+const require = ('https')
 require('dotenv').config()
 // get transport api key from .env file
 const apiId = process.env.TRANSPORT_API_KEY;
