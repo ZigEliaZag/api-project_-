@@ -17,7 +17,8 @@
   "homepage": "https://github.com/ZigEliaZag/api-project_-#readme",
   "dependencies": {
     "dotenv": "^17.2.3",
-    "express": "^5.2.1"
+    "express": "^5.2.1",
+    "require": "^2.4.20"
   },
   "devDependencies": {
     "@playwright/test": "^1.58.1",
