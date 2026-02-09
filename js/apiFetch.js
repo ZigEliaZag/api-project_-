@@ -1,7 +1,3 @@
-//import config
-//import { CONFIG } from "../config/config.js";
-// pexels cleant
-//import dotenv from "dotenv";
 
 // api summary url
 const londonUrL = 'https://en.wikipedia.org/api/rest_v1/page/summary/London';
@@ -68,22 +64,26 @@ export async function handlePexelsApi() {
 
 }
 
-// import api keys for local testing 
-//import { TRANSPORT_API_ID, TRANSPORT_API_KEY } from '../testing.js';
-//const apiId = TRANSPORT_API_ID
-//const apiKey = TRANSPORT_API_KEY
-const require = ('https')
-require('dotenv').config()
-// get transport api key from .env file
-const apiId = process.env.TRANSPORT_API_KEY;
-const apiKey = process.env.TRANSPORT_API_ID;
-
-// departure train station
+// get api keys 
+let config = {};
+async function getConfigKeys() {
+    try {
+        const res = await fetch('/env/config');
+        config = await res.json()
+        //diplay message if config was successfully loaded
+        console.log('Config loaded successfully')
+    } catch (error) {
+        // diplay message if config failed to load 
+        console.error('failed to load config from server:', error);
+    }
+}
+await getConfigKeys()
+// departure station 
 const departureTrainStation = 'EUS' // London Euston 
 
 async function trainUrl() {
     /** fetch api data  */
-    const trainData = await fetch(`https://transportapi.com/v3/uk/train/station_timetables/${departureTrainStation}.json?app_id=${apiId}&app_key=${apiKey}&train_status=passenger`);
+    const trainData = await fetch(`https://transportapi.com/v3/uk/train/station_timetables/${departureTrainStation}.json?app_id=${config.transportapiId}&app_key=${config.transportapiKey}&train_status=passenger`);
     const response = await trainData.json();
     // gets all allowed data by api provider
     const departure = response.departures.all;
