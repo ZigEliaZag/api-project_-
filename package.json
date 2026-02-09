@@ -1,9 +1,13 @@
 {
   "name": "api-project_",
   "version": "1.0.0",
+  "type": "module",
   "description": "To ensure that my api key does not get expose, I use CONFIG then export the key to api file",
   "main": "testing.js",
-  "scripts": {},
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ZigEliaZag/api-project_-.git"
@@ -18,6 +22,7 @@
   "dependencies": {
     "dotenv": "^17.2.3",
     "express": "^5.2.1",
+    "path": "^0.12.7",
     "require": "^2.4.20"
   },
   "devDependencies": {
