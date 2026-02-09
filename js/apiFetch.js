@@ -119,5 +119,5 @@ async function trainUrl() {
 
 }
 
-await trainUrl()
+trainUrl()
 
