@@ -11,13 +11,21 @@ function showMenu() {
     /*
      targets menu button to dipslay menu list
     */
-    toggleMenuBtn.classList.toggle("active") // activets close menu
-    menuList.classList.toggle("open") // activets open menu
+    //toggleMenuBtn.classList.toggle("active") // activets close menu
+    menuList.classList.toggle("open") //activets open menu
 }
 
 // display menu list
 toggleMenuBtn.addEventListener("click", showMenu);
-
+// close menu
+function closeMenu() {
+    /** close menu when click on the listed options */
+    const closeByClick = document.querySelector("header .navigation-menu")
+    closeByClick.addEventListener('click', () => {
+        menuList.classList.remove('open')
+    })
+}
+closeMenu()
 // fetched api content
 const londonApiSummary = await londonSummary();
 const manchesterApiSummary = await manchesterSummary();
