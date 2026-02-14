@@ -21,7 +21,7 @@ app.get('/env/config', (req, res) => {
 });
 // local host 
 app.listen(PORT, () => {
-    console.log(` server is runnig at https://localhost:${PORT}`)
+    console.log(` server is runnig at http://localhost:${PORT}`)
 })
 
 
