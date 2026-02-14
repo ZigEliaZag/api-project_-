@@ -3,7 +3,7 @@ import { londonSummary, manchesterSummary, handlePexelsApi } from "./apiFetch.js
 // import time function 
 import { time } from "./ui.js";
 
-// navigation bar triger 
+// navigation bar opener
 const toggleMenuBtn = document.querySelector("header .btn-toggle");
 const menuList = document.querySelector("header .navigation-menu");
 
@@ -11,18 +11,18 @@ function showMenu() {
     /*
      targets menu button to dipslay menu list
     */
-    //toggleMenuBtn.classList.toggle("active") // activets close menu
+    toggleMenuBtn.classList.toggle("active") // activets close menu
     menuList.classList.toggle("open") //activets open menu
 }
-
 // display menu list
 toggleMenuBtn.addEventListener("click", showMenu);
 // close menu
 function closeMenu() {
-    /** close menu when click on the listed options */
+    /** close menu when click on the listed options or menu area */
     const closeByClick = document.querySelector("header .navigation-menu")
     closeByClick.addEventListener('click', () => {
         menuList.classList.remove('open')
+        toggleMenuBtn.classList.remove('active')
     })
 }
 closeMenu()
