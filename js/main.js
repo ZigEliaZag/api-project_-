@@ -1,7 +1,7 @@
 // import api functions
-import { londonSummary, manchesterSummary, handlePexelsApi } from "./apiFetch.js";
+import { londonSummary, manchesterSummary } from "./apiFetch.js";
 // import time function 
-import { time } from "./ui.js";
+//import { time } from "./ui.js";
 
 // navigation bar opener
 const toggleMenuBtn = document.querySelector("header .btn-toggle");
@@ -35,9 +35,11 @@ document.getElementById("londonSummary").innerHTML = londonApiSummary;
 document.getElementById("manchesterSummary").innerHTML = manchesterApiSummary;
 
 // fetched api image from pexels 
-const backGroundImages = await handlePexelsApi();
+//const backGroundImages = await handlePexelsApi();
 // html body travel section background image
-document.getElementById("background-image").style.backgroundImage = `url(${backGroundImages})`;
+//document.getElementById("background-image").style.backgroundImage = `url(${backGroundImages})`;
 //display current date and time in UK 
-const localTime = time();
-document.getElementById("current-date").innerHTML = localTime;
+//const localTime = time();
+//document.getElementById("current-date").innerHTML = localTime;
+
+//console.log(backGroundImages)
