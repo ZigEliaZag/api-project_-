@@ -16,7 +16,9 @@ app.use(express.static(__dirname));
 app.get('/env/config', (req, res) => {
     res.json({
         transportapiKey: process.env.TRANSPORT_API_KEY,
-        transportapiId: process.env.TRANSPORT_API_ID
+        transportapiId: process.env.TRANSPORT_API_ID,
+        pexelsapiKey: process.env.PEXELS_KEY,
+        pexelsimageId: process.env.PEXELS_IMAGE_ID
     });
 });
 // local host 
