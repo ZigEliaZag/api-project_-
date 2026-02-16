@@ -1,9 +1,22 @@
 
+// fetch api keys from config 
+let config = {};
+async function getConfigKeys() {
+    try {
+        const res = await fetch('/env/config');
+        config = await res.json()
+        //diplay message if config was successfully loaded
+        console.log('Config loaded successfully')
+    } catch (error) {
+        // diplay message if config failed to load 
+        console.error('failed to load config from server:', error);
+    }
+}
+await getConfigKeys()
+
 // api summary url
 const londonUrL = 'https://en.wikipedia.org/api/rest_v1/page/summary/London';
 const manchesterUrl = 'https://en.wikipedia.org/api/rest_v1/page/summary/Manchester';
-
-
 
 // export function
 export async function londonSummary() {
@@ -27,57 +40,31 @@ export async function manchesterSummary() {
     return respond.extract
 }
 
-// fetch pexels image
-//let pexelsApiUrl = CONFIG.PEXELS_URL  // pexels photo url 
-//const pexelsApiKey = CONFIG.PEXELS_KEY  // pexels personal key
-//const imageid = CONFIG.IMAGE_ID // id of the image/photo
+// pexels image url
 const pexelsUrl = 'https://api.pexels.com/v1/photos';
-const imageid = 1181202;
-// get api key from .env  file
-//require('dotenv').config()
-//dotenv.config();
-const pexelsApiKey = 'XQZxTk3e0dqYzqVOm9XxrK2umJ0PaQnSvlnzgIIveiLM4sfvukh88fwZ'; // temporary key, valid up to 4 months
+const pexelsKey = config.pexelsapiKey // pexels api key
+const pexelsImgId = config.pexelsimageId // pexels image id 
 
+// fetch pexels image
 export async function handlePexelsApi() {
     /**
      fetch the pexels api photo and return the result
      */
-    const getData = await fetch(`${pexelsUrl}/${imageid}`, {
+    const getData = await fetch(`${pexelsUrl}/${config.pexelsimageId}`, {
         method: 'GET',
-        id: imageid,
+        id: pexelsImgId,
         headers: {
-            Authorization: pexelsApiKey // pexels api 
+            Authorization: pexelsKey// pexels api 
             // personal key to access the api
         }
     })
     const displayData = await getData.json();
 
-    // dipslay error message if image failed to load
-    if (displayData !== displayData) {
-        console.error('Could not load', displayData);
-    } else {
-
-        return displayData.src.original
-    }
-
-    //return displayData.src.original
+    return displayData.src.original
+    //console.log(displayData.src.original)
 
 }
 
-// get api keys 
-let config = {};
-async function getConfigKeys() {
-    try {
-        const res = await fetch('/env/config');
-        config = await res.json()
-        //diplay message if config was successfully loaded
-        console.log('Config loaded successfully')
-    } catch (error) {
-        // diplay message if config failed to load 
-        console.error('failed to load config from server:', error);
-    }
-}
-await getConfigKeys()
 // departure station 
 const departureTrainStation = 'EUS' // London Euston 
 
