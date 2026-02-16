@@ -207,7 +207,6 @@ header {
     background-color: #e3e3e3;
     display: flex;
     justify-content: center;
-    margin-top: 4.2rem;
 
     /* remove dots from ul */
     li {
@@ -230,8 +229,7 @@ header {
 
         /* current date and time */
         #date-time {
-            font-size: x-large;
-
+            font-size: large;
             display: flex;
             gap: 30px;
             padding-bottom: 18px;
@@ -248,35 +246,55 @@ header {
 
         }
 
-        /* time table for departure and destination */
-        table,
-        th,
-        td {
-            border: 2px solid #f2f2f2;
-            padding: 4px;
-
-        }
-
-        table {
-            margin-top: 20px;
-            border-collapse: collapse;
-            color: #ffffff;
-            background-color: #263849;
-
-        }
-
-        /* gives separet background color to th child */
-        th:nth-child(even),
-        th:nth-child(even) {
-            background-color: #606470;
-        }
-
-        /* gives sepate background color to tr child */
-        tr:nth-child(even) {
-            background-color: #606470;
-        }
     }
 }
+
+/* travel time table */
+.time-table-container {
+    width: 100%;
+    align-content: center;
+}
+
+#timeTable {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #e3e3e3;
+
+    /* time table for departure and destination */
+    table,
+    th,
+    td {
+        border: 2px solid #f2f2f2;
+        padding: 4px;
+
+    }
+
+    table {
+        /*margin-top: 20px;*/
+        border-collapse: collapse;
+        color: #ffffff;
+        background-color: #263849;
+
+
+    }
+
+    /* gives separet background color to th child */
+    th:nth-child(even),
+    th:nth-child(even) {
+        background-color: #606470;
+    }
+
+    /* gives sepate background color to tr child */
+    tr:nth-child(even) {
+        background-color: #606470;
+    }
+
+
+}
+
+
+
 
 
 
@@ -383,16 +401,31 @@ header {
 
         div {
             color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 3.6rem;
+            margin-right: 0;
+
 
             h2 {
-                font-size: xx-large;
+                font-size: large;
+
             }
 
             p {
                 background-color: #000000a8;
                 border-radius: 5px;
                 font-size: medium;
+
             }
+        }
+    }
+
+    /* time table for departure and destination */
+    #timeTable {
+        table {
+            max-width: 20%;
         }
     }
 
