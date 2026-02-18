@@ -50,7 +50,7 @@ export async function handlePexelsApi() {
     /**
      fetch the pexels api photo and return the result
      */
-    const getData = await fetch(`${pexelsUrl}/${config.pexelsimageId}`, {
+    const getData = await fetch(`${pexelsUrl}/${pexelsImgId}`, {
         method: 'GET',
         id: pexelsImgId,
         headers: {
