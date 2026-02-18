@@ -261,6 +261,11 @@ header {
     align-items: center;
     background-color: #e3e3e3;
 
+    h4 {
+        text-align: center;
+        color: #de0808;
+    }
+
     /* time table for departure and destination */
     table,
     th,
@@ -424,6 +429,9 @@ header {
 
     /* time table for departure and destination */
     #timeTable {
+        h4 {
+            width: 11.9rem;
+        }
 
         table,
         th,
