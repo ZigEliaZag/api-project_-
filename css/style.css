@@ -424,10 +424,38 @@ header {
 
     /* time table for departure and destination */
     #timeTable {
-        table {
-            max-width: 20%;
+
+        table,
+        th,
+        tr {
+            font-size: small;
         }
     }
 
 
+}
+
+@media screen and (max-width: 320px) {
+
+    .departure-destination {
+        h3 {
+            font-size: 16px;
+        }
+    }
+
+    /* web name*/
+    .home {
+        font-size: 19px;
+    }
+
+    /* time table, travel section */
+    #timeTable {
+        min-width: 15rem;
+
+        table,
+        th,
+        tr {
+            font-size: xx-small;
+        }
+    }
 }
