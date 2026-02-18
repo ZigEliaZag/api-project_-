@@ -54,7 +54,7 @@ export async function handlePexelsApi() {
         method: 'GET',
         id: pexelsImgId,
         headers: {
-            Authorization: pexelsKey// pexels api key
+            Authorization: (`${config.pexelsKey}`)// pexels api key
             // personal key to access the api
         }
     })
