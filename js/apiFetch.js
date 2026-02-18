@@ -43,7 +43,7 @@ export async function manchesterSummary() {
 // pexels image url
 const pexelsUrl = 'https://api.pexels.com/v1/photos';
 const pexelsKey = config.pexelsapiKey // pexels api key
-const pexelsImgId = config.pexelsimageId // pexels image id 
+const pexelsImgId = 1181202// pexels image id 
 
 // fetch pexels image
 export async function handlePexelsApi() {
@@ -54,7 +54,7 @@ export async function handlePexelsApi() {
         method: 'GET',
         id: pexelsImgId,
         headers: {
-            Authorization: pexelsKey// pexels api 
+            Authorization: pexelsKey// pexels api key
             // personal key to access the api
         }
     })
