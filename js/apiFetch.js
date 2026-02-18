@@ -1,4 +1,6 @@
 
+
+
 // fetch api keys from config 
 let config = {};
 async function getConfigKeys() {
@@ -54,23 +56,34 @@ export async function handlePexelsApi() {
         method: 'GET',
         id: pexelsImgId,
         headers: {
-            Authorization: (`${config.pexelsKey}`)// pexels api key
+            Authorization: pexelsKey// pexels api key
             // personal key to access the api
         }
     })
     const displayData = await getData.json();
 
-    return displayData.src.original
+    return displayData.src.original;
     //console.log(displayData.src.original)
 
 }
 
 // departure station 
-const departureTrainStation = 'EUS' // London Euston 
+const departureTrainStation = 'EUS'; // London Euston 
 
 async function trainUrl() {
     /** fetch api data  */
     const trainData = await fetch(`https://transportapi.com/v3/uk/train/station_timetables/${departureTrainStation}.json?app_id=${config.transportapiId}&app_key=${config.transportapiKey}&train_status=passenger`);
+    // show error message usage limit of the allowed data is above 100% 
+    // limit utilization hits per day is 30 
+    if (trainData.status === 403) {
+        errorMessage(`${trainData.status}: Limit usage is above 100%. Limit utilization of hits per day: 30/30. You have to wait 24H`);
+    }
+    // display error message to html file 
+    function errorMessage(apiErrorMessage) {
+        const diplayError = document.getElementById("transportApiErrorMessage");
+        diplayError.textContent = apiErrorMessage;
+    }
+
     const response = await trainData.json();
     // gets all allowed data by api provider
     const departure = response.departures.all;
