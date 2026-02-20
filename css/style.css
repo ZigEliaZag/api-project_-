@@ -255,12 +255,27 @@ header {
     align-content: center;
 }
 
+/* time table section */
+#table-section {
+    background-color: #e3e3e3;
+}
+
+/* alert information */
+.alert-information {
+    text-align: center;
+    background-color: #acdceeab;
+    color: #5e87b8;
+    margin-left: 29%;
+    margin-right: 29%;
+}
+
 #timeTable {
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color: #e3e3e3;
 
+    /* error message when time table api hit limit is reached */
     h4 {
         text-align: center;
         color: #de0808;
@@ -284,10 +299,15 @@ header {
 
     }
 
-    /* gives separet background color to th child */
+    th {
+        background-color: #000000;
+    }
+
+    /* gives separet background color to th */
     th:nth-child(even),
     th:nth-child(even) {
-        background-color: #606470;
+        background-color: #f2f2f2;
+        color: #000000;
     }
 
     /* gives sepate background color to tr child */
@@ -303,7 +323,7 @@ header {
 
 
 
-/* for tablets with screens up to 991px */
+/* for tablets with screens 991px */
 @media(max-width: 991px) {
 
     /* hidden navigation menu */
@@ -428,6 +448,12 @@ header {
     }
 
     /* time table for departure and destination */
+    /* alert information */
+    .alert-information {
+        margin-left: 17%;
+        margin-right: 17%;
+    }
+
     #timeTable {
         h4 {
             width: 11.9rem;
@@ -457,6 +483,10 @@ header {
     }
 
     /* time table, travel section */
+    .alert-information {
+        margin: 0;
+    }
+
     #timeTable {
         min-width: 15rem;
 
