@@ -159,16 +159,15 @@ const handleTicketMasterApi = async (show) => {
                                `
 
         }
-
-        //}
-        //// atraction section  
-        //// join atraction to events container  
-        //const places = `
-        //            <div class="events-container">${atraction}</div>
-        //                `
-        //// display returned api data into atractions section 
-        //document.getElementById("atractions").innerHTML = places
     }
+    // atraction section  
+    // join atraction to events container  
+    const places = `
+                    <div class="events-container">${atraction}</div>
+                        `
+    // display returned api data into atractions section 
+    document.getElementById("atractions").innerHTML = places;
+}
 
-    handleTicketMasterApi()
+handleTicketMasterApi()
 
