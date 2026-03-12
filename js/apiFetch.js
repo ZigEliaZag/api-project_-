@@ -130,10 +130,10 @@ const handleTicketMasterApi = async (show) => {
     }
     );
     // get data in json
-    //const getData = await ticketMasterUrl.json()
+    const getData = await ticketMasterUrl.json()
     //console.log(getData._embedded)
-
-    //const eventsData = getData._embedded.events
+    // return all arrays
+    const eventsData = getData._embedded.events
 
     //let atraction = ` `
     //// lop through fetched api data and return each wished data in new div  
