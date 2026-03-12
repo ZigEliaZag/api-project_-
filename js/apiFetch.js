@@ -135,30 +135,30 @@ const handleTicketMasterApi = async (show) => {
     // return all arrays
     const eventsData = getData._embedded.events
 
-    //let atraction = ` `
+    let atraction = ` `
     //// lop through fetched api data and return each wished data in new div  
-    //for (let events in eventsData) {
-    //    atraction += ` 
-    //    <div>
-    //        <img src="${eventsData[events]['images'][0]['url']}" class="events-images"><br>
-    //        <p class="names">${eventsData[events]['name']}<p/><br>
-    //        <span>Date <strong>${eventsData[events]['dates']['start']['localDate']}</strong></span><br>
-    //        <span>Start <strong>${eventsData[events]['dates']['start']['localTime']}</strong></span> <br>
-    //        <a href="${eventsData[events]['url']}" target="_blank"><p>Get a ticket now</p></a>
-    //    </div>  
-    //`
-    //    // this will check if there is any underfined pleaseNote, else it will return defined pleaseNote
-    //    if (eventsData[events]['pleaseNote'] === undefined) {
-    //        atraction += `
-    //                    <span>No please note</span>
-    //                        `
-    //    } else {
-    //        atraction += `
-    //                    <span>Please note: ${eventsData[events]['pleaseNote']}</span>
-    //                       
-    //                        `
+    for (let events in eventsData) {
+        atraction += ` 
+        <div>
+            <img src="${eventsData[events]['images'][0]['url']}" class="events-images"><br>
+            <p class="names">${eventsData[events]['name']}<p/><br>
+            <span>Date <strong>${eventsData[events]['dates']['start']['localDate']}</strong></span><br>
+            <span>Start <strong>${eventsData[events]['dates']['start']['localTime']}</strong></span> <br>
+            <a href="${eventsData[events]['url']}" target="_blank"><p>Get a ticket now</p></a>
+        </div>  
+    `
+        //    // this will check if there is any underfined pleaseNote, else it will return defined pleaseNote
+        //    if (eventsData[events]['pleaseNote'] === undefined) {
+        //        atraction += `
+        //                    <span>No please note</span>
+        //                        `
+        //    } else {
+        //        atraction += `
+        //                    <span>Please note: ${eventsData[events]['pleaseNote']}</span>
+        //                       
+        //                        `
 
-    //    }
+    }
 
     //}
     //// atraction section  
