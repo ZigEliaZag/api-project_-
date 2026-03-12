@@ -147,28 +147,28 @@ const handleTicketMasterApi = async (show) => {
             <a href="${eventsData[events]['url']}" target="_blank"><p>Get a ticket now</p></a>
         </div>  
     `
-        //    // this will check if there is any underfined pleaseNote, else it will return defined pleaseNote
-        //    if (eventsData[events]['pleaseNote'] === undefined) {
-        //        atraction += `
-        //                    <span>No please note</span>
-        //                        `
-        //    } else {
-        //        atraction += `
-        //                    <span>Please note: ${eventsData[events]['pleaseNote']}</span>
-        //                       
-        //                        `
+        // this will check if there is any underfined pleaseNote, else it will return defined pleaseNote
+        if (eventsData[events]['pleaseNote'] === undefined) {
+            atraction += `
+                           <span>No please note</span>
+                               `
+        } else {
+            atraction += `
+                           <span>Please note: ${eventsData[events]['pleaseNote']}</span>
+                              
+                               `
 
+        }
+
+        //}
+        //// atraction section  
+        //// join atraction to events container  
+        //const places = `
+        //            <div class="events-container">${atraction}</div>
+        //                `
+        //// display returned api data into atractions section 
+        //document.getElementById("atractions").innerHTML = places
     }
 
-    //}
-    //// atraction section  
-    //// join atraction to events container  
-    //const places = `
-    //            <div class="events-container">${atraction}</div>
-    //                `
-    //// display returned api data into atractions section 
-    //document.getElementById("atractions").innerHTML = places
-}
-
-handleTicketMasterApi()
+    handleTicketMasterApi()
 
