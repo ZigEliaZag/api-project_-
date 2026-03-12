@@ -1,9 +1,9 @@
 
 
 
-// fetch api keys from config 
+// fetch api keys from .env 
 let config = {};
-async function getConfigKeys() {
+async function getEnvKeys() {
     try {
         const res = await fetch('/env/config');
         config = await res.json()
@@ -14,7 +14,7 @@ async function getConfigKeys() {
         console.error('failed to load config from server:', error);
     }
 }
-await getConfigKeys()
+await getEnvKeys()
 
 // api summary url
 const londonUrL = 'https://en.wikipedia.org/api/rest_v1/page/summary/London';
@@ -73,12 +73,12 @@ const departureTrainStation = 'EUS'; // London Euston
 async function trainUrl() {
     /** fetch api data  */
     const trainData = await fetch(`https://transportapi.com/v3/uk/train/station_timetables/${departureTrainStation}.json?app_id=${config.transportapiId}&app_key=${config.transportapiKey}&train_status=passenger`);
-    // show error message usage limit of the allowed data is above 100% 
-    // limit utilization hits per day is 30 
+    // show error message when usage limit of the allowed data is above 100% 
+    // limit utilization hits per day is 30. every laod equal 1 hit
     if (trainData.status === 403) {
         errorMessage(`${trainData.status}: Limit usage is above 100%. Limit utilization of hits per day: 30/30. You have to wait 24H`);
     }
-    // display error message to html file 
+    // display error message to the user 
     function errorMessage(apiErrorMessage) {
         const diplayError = document.getElementById("transportApiErrorMessage");
         diplayError.textContent = apiErrorMessage;
@@ -114,10 +114,61 @@ async function trainUrl() {
         ${timeTable /** appends returned tr data from departure to the table */}
       </table>
     `
-    // display the table in html body 
+    // display the table in html file
     document.getElementById("timeTable").innerHTML = showTable;
 
 }
-
 trainUrl()
+
+//personal ticketmaster api key
+const ticketMasterApiKey = config.ticketmasterapiKey
+// handle ticketmaster api 
+const handleTicketMasterApi = async (show) => {
+    // ticket master url
+    const ticketMasterUrl = await fetch(`https://app.ticketmaster.com/discovery/v2/events.json?apikey=${ticketMasterApiKey}&CountryCode=GB&city=Manchester`, {
+        method: "GET"
+    }
+    );
+    // get data in json
+    //const getData = await ticketMasterUrl.json()
+    //console.log(getData._embedded)
+
+    //const eventsData = getData._embedded.events
+
+    //let atraction = ` `
+    //// lop through fetched api data and return each wished data in new div  
+    //for (let events in eventsData) {
+    //    atraction += ` 
+    //    <div>
+    //        <img src="${eventsData[events]['images'][0]['url']}" class="events-images"><br>
+    //        <p class="names">${eventsData[events]['name']}<p/><br>
+    //        <span>Date <strong>${eventsData[events]['dates']['start']['localDate']}</strong></span><br>
+    //        <span>Start <strong>${eventsData[events]['dates']['start']['localTime']}</strong></span> <br>
+    //        <a href="${eventsData[events]['url']}" target="_blank"><p>Get a ticket now</p></a>
+    //    </div>  
+    //`
+    //    // this will check if there is any underfined pleaseNote, else it will return defined pleaseNote
+    //    if (eventsData[events]['pleaseNote'] === undefined) {
+    //        atraction += `
+    //                    <span>No please note</span>
+    //                        `
+    //    } else {
+    //        atraction += `
+    //                    <span>Please note: ${eventsData[events]['pleaseNote']}</span>
+    //                       
+    //                        `
+
+    //    }
+
+    //}
+    //// atraction section  
+    //// join atraction to events container  
+    //const places = `
+    //            <div class="events-container">${atraction}</div>
+    //                `
+    //// display returned api data into atractions section 
+    //document.getElementById("atractions").innerHTML = places
+}
+
+handleTicketMasterApi()
 
