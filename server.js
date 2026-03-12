@@ -18,13 +18,12 @@ app.get('/env/config', (req, res) => {
         transportapiKey: process.env.TRANSPORT_API_KEY,
         transportapiId: process.env.TRANSPORT_API_ID,
         pexelsapiKey: process.env.PEXELS_KEY,
-        pexelsimageId: process.env.PEXELS_IMAGE_ID
+        pexelsimageId: process.env.PEXELS_IMAGE_ID,
+        ticketmasterapiKey: process.env.TICKETMASTER_API_KEY
     });
 });
 // local host 
 app.listen(PORT, () => {
     console.log(` server is runnig at http://localhost:${PORT}`)
 })
-
-
 
