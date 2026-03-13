@@ -75,6 +75,7 @@ async function trainUrl() {
     // limit utilization hits per day is 30. every laod equal 1 hit
     if (trainData.status === 403) {
         errorMessage(`${trainData.status}: Limit usage is above 100%. Limit utilization of hits per day: 30/30. You have to wait 24H`);
+        console.error("forbidden request")
     }
     // display error message to the user 
     function errorMessage(apiErrorMessage) {
