@@ -127,6 +127,9 @@ const handleTicketMasterApi = async () => {
         method: "GET",
         mode: 'no-cors',
         //credentials: 'include'
+        headers: {
+            Authorization: ticketMasterApiKey
+        }
     }
     );
     // get data in json
