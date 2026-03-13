@@ -125,7 +125,7 @@ const handleTicketMasterApi = async () => {
     // ticket master url
     const ticketMasterUrl = await fetch(`https://app.ticketmaster.com/discovery/v2/events.json?apikey=${ticketsApiKey}&CountryCode=GB&city=Manchester`, {
         method: "GET",
-        mode: 'no-cors',
+        //mode: 'no-cors',
         //credentials: 'include'
         //headers: {
         //    Authorization: ticketMasterApiKey
