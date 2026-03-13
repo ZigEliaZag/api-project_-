@@ -318,10 +318,10 @@ header {
 
 }
 
-
-
-
-
+/* events container. any return undefined pleaseNote from ticketmaster api will be hiden */
+.hide-please-note {
+    display: none;
+}
 
 /* for tablets with screens 991px */
 @media(max-width: 991px) {
