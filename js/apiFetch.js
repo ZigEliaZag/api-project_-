@@ -119,7 +119,7 @@ async function trainUrl() {
 trainUrl()
 
 //personal ticketmaster api key
-const ticketMasterApiKey = config.ticketmasterapiKey
+//const ticketMasterApiKey = config.ticketmasterapiKey
 // handle ticketmaster api 
 const handleTicketMasterApi = async () => {
     // ticket master url
@@ -127,9 +127,9 @@ const handleTicketMasterApi = async () => {
         method: "GET",
         mode: 'no-cors',
         //credentials: 'include'
-        headers: {
-            Authorization: ticketMasterApiKey
-        }
+        //headers: {
+        //    Authorization: ticketMasterApiKey
+        //}
     }
     );
     // get data in json
