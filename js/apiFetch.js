@@ -119,11 +119,11 @@ async function trainUrl() {
 trainUrl()
 
 //personal ticketmaster api key
-const ticketMasterApiKey = config.ticketmasterapiKey
+//const ticketMasterApiKey = config.ticketmasterapiKey
 // handle ticketmaster api 
 const handleTicketMasterApi = async () => {
     // ticket master url
-    const ticketMasterUrl = await fetch(`https://app.ticketmaster.com/discovery/v2/events.json?apikey=${ticketMasterApiKey}&CountryCode=GB&city=Manchester`, {
+    const ticketMasterUrl = await fetch(`https://app.ticketmaster.com/discovery/v2/events.json?apikey=${config.ticketmasterapiKey}&CountryCode=GB&city=Manchester`, {
         method: "GET",
         mode: 'no-cors',
         //credentials: 'include'
