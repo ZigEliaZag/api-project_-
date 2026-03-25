@@ -21,8 +21,8 @@ header {
     width: 100%;
     height: 4.6rem;
     align-content: center;
-    position: fixed;
     /* header stays above content */
+    position: fixed;
     z-index: 1000;
     background: linear-gradient(to right, #CF2D11 40%, #260801) left;
 
@@ -318,9 +318,57 @@ header {
 
 }
 
-/* events container. any return undefined pleaseNote from ticketmaster api will be hiden */
-.hide-please-note {
+/* atractions section. any return undefined pleaseNote from ticketmaster api will be hidden */
+/*.hide-please-note {
     display: none;
+    width: 48%;
+    border-bottom: 3px solid white;
+}*/
+/* atraction section */
+#atractions {
+    background: linear-gradient(#DECECC, #CF2D11, #DECECC);
+
+    /* event container */
+    .events-container {
+        display: flex;
+        flex-direction: column;
+        max-width: 50%;
+        margin-left: 10%;
+
+
+        div {
+            margin-top: 48px;
+            margin-left: 28px;
+
+            /* images */
+            img {
+                margin-top: 11px;
+                width: 29rem;
+                height: 23rem;
+                padding-bottom: 16px;
+                border-radius: 8px 80px 30px;
+            }
+
+            a {
+                text-decoration: none;
+                color: #000000;
+            }
+
+            a:hover {
+                color: #ffffff;
+            }
+        }
+
+        /* please notes */
+        .please-note,
+        .hide-please-note {
+            padding-top: 19px;
+            margin-left: 28px;
+            padding-bottom: 5px;
+            border-bottom: 3px solid white;
+
+        }
+    }
 }
 
 /* for tablets with screens 991px */
