@@ -162,7 +162,7 @@ const handleTicketMasterApi = async () => {
                             `;
         } else {
             atraction += `
-                           <span>Please note: ${eventsData[events]['pleaseNote']}</span>
+                           <span class="please-note">Please note: ${eventsData[events]['pleaseNote']}</span>
                               
                                `;
         }
