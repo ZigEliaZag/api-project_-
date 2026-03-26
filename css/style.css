@@ -81,7 +81,7 @@ header {
     }
 
     .navigation-container span:hover {
-        color: aquamarine;
+        color: #7fffd4;
         text-decoration: underline;
     }
 
@@ -152,9 +152,11 @@ header {
             font-size: larger;
         }
     }
+}
 
-
-
+/* add more space bitween summary section and atraction section */
+.space-under {
+    margin-bottom: 4.2rem;
 }
 
 /* travel section */
@@ -241,11 +243,7 @@ header {
                 margin-left: 27px;
                 font-weight: normal;
             }
-
-
-
         }
-
     }
 }
 
@@ -295,8 +293,6 @@ header {
         border-collapse: collapse;
         color: #ffffff;
         background-color: #263849;
-
-
     }
 
     th {
@@ -325,6 +321,21 @@ header {
     border-bottom: 3px solid white;
 }*/
 /* atraction section */
+.anouns {
+    background: linear-gradient(#000000, #ffffff, #DECECC);
+    height: 29px;
+    text-align: center;
+    padding-top: 9px;
+    padding-bottom: 9px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: 10rem;
+    margin-left: 35%;
+    border-radius: 9px;
+    font-weight: 80;
+    font-size: large;
+}
+
 #atractions {
     background: linear-gradient(#DECECC, #CF2D11, #DECECC);
 
@@ -346,9 +357,10 @@ header {
                 width: 29rem;
                 height: 23rem;
                 padding-bottom: 16px;
-                border-radius: 8px 80px 30px;
+                border-radius: 0px 80px 0px;
             }
 
+            /* anchors */
             a {
                 text-decoration: none;
                 color: #000000;
@@ -366,7 +378,6 @@ header {
             margin-left: 28px;
             padding-bottom: 5px;
             border-bottom: 3px solid white;
-
         }
     }
 }
