@@ -20,7 +20,7 @@
     <!-- stylesheet -->
     <link rel="stylesheet" href="../css/style.css">
     <!-- title -->
-    <title>Travel</title>
+    <title>Feedback</title>
 </head>
 
 <body>
@@ -70,6 +70,23 @@
 
     </header>
 
+    <form action="https://formdump.codeinstitute.net" class="feedback-form" method="POST" target="_top">
+        <div class="info-field">
+            <label for="name" aria-label="type in your name">Name</label>
+            <input id="name" name="name" required>
+        </div>
+        <div class="info-field">
+            <label for="email">Email</label>
+            <input id="email" name="email" required>
+        </div>
+        <div class="info-field">
+            <label for="feedback" aria-label="type your feedback message">Feedback message</label>
+            <textarea name="feedback" id="feedback"></textarea>
+        </div>
+        <div class="send-feedback">
+            <button class="submit-button" type="submit">Send</button>
+        </div>
+    </form>
 
 </body>
 
