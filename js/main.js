@@ -1,5 +1,5 @@
 // import api functions
-import { londonSummary, manchesterSummary } from "./apiFetch.js";
+//import { londonSummary, manchesterSummary } from "./apiFetch.js";
 // import time function 
 //import { time } from "./ui.js";
 
@@ -27,12 +27,12 @@ function closeMenu() {
 }
 closeMenu()
 // fetched api content
-const londonApiSummary = await londonSummary();
-const manchesterApiSummary = await manchesterSummary();
-
-// display api fetched content
-document.getElementById("londonSummary").innerHTML = londonApiSummary;
-document.getElementById("manchesterSummary").innerHTML = manchesterApiSummary;
+//const londonApiSummary = await londonSummary();
+//const manchesterApiSummary = await manchesterSummary();
+//
+//// display api fetched content
+//document.getElementById("londonSummary").innerHTML = londonApiSummary;
+//document.getElementById("manchesterSummary").innerHTML = manchesterApiSummary;
 
 // fetched api image from pexels 
 //const backGroundImages = await handlePexelsApi();
