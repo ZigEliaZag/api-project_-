@@ -1,4 +1,3 @@
-import { getJson } from "serpapi";
 // fetch api keys from server.js
 let config = {};
 async function getEnvKeys() {
