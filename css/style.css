@@ -452,6 +452,83 @@ header {
     }
 }
 
+/* footer */
+footer {
+    height: 10rem;
+    background-color: #040c13;
+    color: #ffffff;
+}
+
+footer div {
+    display: flex;
+    height: 6rem;
+    width: 70%;
+}
+
+.footer-menu {
+    margin-left: 2rem;
+    padding-top: 18px;
+    flex-direction: column;
+    gap: 7px;
+
+
+    h5 {
+        font-size: 16px;
+        font-weight: 410;
+    }
+}
+
+.footer-menu ul {
+    /* remove dots*/
+    list-style-type: none;
+    font-size: 14px;
+}
+
+.footer-menu a {
+    color: #ffffff;
+    /* reomev underline*/
+    text-decoration: none;
+}
+
+.footer-menu a:hover {
+    color: #7fffd4;
+    background-color: #000000;
+}
+
+/* fonts */
+a .fa-brands {
+    font-size: 27px;
+}
+
+a .fa-facebook:hover {
+    color: #3b5998;
+    background-color: #f7f7f7;
+    height: 29px;
+    width: 32px;
+    padding-top: 1.5px;
+    border-radius: 50%;
+}
+
+a .fa-youtube:hover {
+    color: #cc181e;
+    background-color: #ffffff;
+    border-radius: 7px;
+}
+
+a .fa-instagram:hover {
+    color: #e1306c;
+    background-color: #ffffff;
+    border-radius: 8px;
+}
+
+a .fa-pinterest:hover {
+    color: #E60023;
+    background-color: #ffffff;
+    height: 27px;
+    width: 27px;
+    border-radius: 50%;
+}
+
 /* for tablets with screens 768px */
 @media(max-width: 991px) {
 
