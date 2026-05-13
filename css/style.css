@@ -744,6 +744,31 @@ a .fa-pinterest:hover {
         }
     }
 
+    /* footer */
+    footer div {
+        width: 100%;
+    }
+
+    .footer-menu {
+        margin-left: 1rem;
+        gap: 4px;
+
+        h5 {
+            font-size: 12px;
+        }
+    }
+
+    /* links to feedback page and train departure page */
+    .footer-link a {
+        font-size: 10px;
+    }
+
+    /* fonts */
+    a .fa-brands {
+        font-size: 19px;
+    }
+
+
 
 }
 
@@ -856,6 +881,12 @@ a .fa-pinterest:hover {
     /* feedback form */
     .feedback-container {
         margin-left: 0;
+    }
+
+    /* footer */
+    footer div {
+        flex-direction: column-reverse;
+        height: 100%;
     }
 
 }
