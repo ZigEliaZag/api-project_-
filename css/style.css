@@ -745,8 +745,13 @@ a .fa-pinterest:hover {
     }
 
     /* footer */
+    footer {
+        height: 12rem;
+    }
+
     footer div {
-        width: 100%;
+        flex-direction: column-reverse;
+        height: fit-content;
     }
 
     .footer-menu {
@@ -767,9 +772,6 @@ a .fa-pinterest:hover {
     a .fa-brands {
         font-size: 19px;
     }
-
-
-
 }
 
 
@@ -778,6 +780,11 @@ a .fa-pinterest:hover {
     /* feedback form */
     .feedback-container {
         margin-left: 1.7rem;
+    }
+
+    /* footer */
+    footer div {
+        flex-direction: column-reverse;
     }
 }
 
@@ -886,7 +893,6 @@ a .fa-pinterest:hover {
     /* footer */
     footer div {
         flex-direction: column-reverse;
-        height: 100%;
     }
 
 }
